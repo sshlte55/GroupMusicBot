@@ -19,7 +19,7 @@ Tambahkan saya ke grup Anda dan mainkan musik dengan bebas!**
             [
                 [
                     InlineKeyboardButton(
-                        "📝 Daftar perintah bot 📝", url="https://telegra.ph/%C9%A2%CA%99--%E1%B4%8D%E1%B4%9Cs%C9%AA%E1%B4%84-%E1%B4%98%CA%9F%E1%B4%80%CA%8F%E1%B4%87%CA%80-04-21")
+                        "📝 Daftar perintah bot 📝", url="https://telegra.ph/%C9%A2%CA%99--%E1%B4%8D%E1%B4%9Cs%C9%AA%E1%B4%84-%E1%B4%98%CA%9F%E1%B4%80%CA%8F%E1%B4%87%CA%80-04-21-2")
                   ],[
                     InlineKeyboardButton(
                         "👮🏻‍♀Assistant bot", url="https://t.me/GB_Assistant"
