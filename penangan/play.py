@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Processing** sounds...")
+    lel = await message.reply("🔄 Memproses suara...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -27,8 +27,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🔊 Channel",
-                        url="https://t.me/UvinduBro")
+                        text="🔊 Akun ɢᴏᴏᴅ ʙᴏʏs",
+                        url="https://t.me/GB_03101999")
                    
                 ]
             ]
@@ -40,7 +40,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
+                f"❌ Video dengan durasi lebih dari {DURATION_LIMIT} menit tidak diperbolehkan untuk diputar!"
             )
 
         file_name = get_file_name(audio)
@@ -51,17 +51,17 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("❗ You did not give me anything to play!")
+        return await lel.edit_text("❗ Anda tidak memberi saya apa pun untuk dimainkan!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"#⃣ **Queued** at position {position}!")
+        await lel.edit(f"#⃣ Mengantri di posisi {position}!")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-        photo="https://telegra.ph/file/6045f1af1aacf262e6018.jpg",
+        photo="https://telegra.ph/file/960c337be826e76fe8323.jpg",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {}!".format(
+        caption="▶️ Memutar di sini lagu yang diminta oleh {}!".format(
         message.from_user.mention()
         ),
     )
